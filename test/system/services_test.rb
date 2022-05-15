@@ -15,7 +15,9 @@ class ServicesTest < ApplicationSystemTestCase
     click_on "Salvar"
 
     assert_text "Servico cadastrado."
-    click_on "Voltar"
+    assert_selector "p", text: "SERVICE 1"
+    assert_selector "p", text: "59.99"
+    assert_selector "p", text: "1"
   end
 
   test "Fluxo Exepcional 1" do
