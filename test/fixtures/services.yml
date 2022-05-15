@@ -1,0 +1,16 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  description: "SERVICE 1"
+  price: 59.99
+  client: one
+
+two:
+  description: "SERVICE 2"
+  price: 500.00
+  client: two
+
+three:
+  description: "SERVICE 3"
+  price: 152.00
+  client: two

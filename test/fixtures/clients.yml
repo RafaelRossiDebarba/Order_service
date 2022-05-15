@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: "RAFAEL"
+  address: "AV JULHO"
+  city: "SANANDUVA"
+
+two:
+  name: "JOÃO"
+  address: "AV FLORES"
+  city: "PASSO FUNDO"
