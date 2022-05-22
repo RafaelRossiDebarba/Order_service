@@ -7,12 +7,12 @@ class ServicesTest < ApplicationSystemTestCase
 
   test "Fluxo Normal" do
     visit services_url
-    click_on "Novo Serviço"
+    click_button "Novo Serviço"
 
     select("RAFAEL", from: 'service_client_id')
     fill_in "service_description", with: @service.description
     fill_in "service_price", with: @service.price
-    click_on "Salvar"
+    click_button "Salvar"
 
     assert_text "Servico cadastrado."
     assert_selector "p", text: "SERVICE 1"
@@ -22,23 +22,23 @@ class ServicesTest < ApplicationSystemTestCase
 
   test "Fluxo Exepcional 1" do
     visit services_url
-    click_on "Novo Serviço"
+    click_button "Novo Serviço"
 
     select("RAFAEL", from: 'service_client_id')
     fill_in "service_description", with: @service.description
     fill_in "service_price", with: @service.price
-    click_on "Voltar"
+    click_button "Voltar"
 
     assert_equal "/services", current_path
   end
 
   test "Fluxo Exepcional 2" do
     visit services_url
-    click_on "Novo Serviço"
+    click_button "Novo Serviço"
 
     select("RAFAEL", from: 'service_client_id')
     fill_in "service_price", with: "0l"
-    click_on "Salvar"
+    click_button "Salvar"
 
     assert_selector "li", text: "Description can't be blank"
 
@@ -52,20 +52,20 @@ class ServicesTest < ApplicationSystemTestCase
 
   test "should update Service" do
     visit service_url(@service)
-    click_on "Editar", match: :first
+    click_button "Editar", match: :first
 
     select("RAFAEL", from: 'service_client_id')
     fill_in "service_description", with: @service.description
     fill_in "service_price", with: @service.price
-    click_on "Salvar"
+    click_button "Salvar"
 
     assert_text "Serviço atualizado."
-    click_on "Voltar"
+    click_button "Voltar"
   end
 
   test "should destroy Service" do
     visit service_url(@service)
-    click_on "Deletar", match: :first
+    click_button "Deletar", match: :first
 
     assert_text "Serviço foi deletado."
   end

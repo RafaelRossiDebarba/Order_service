@@ -2,13 +2,13 @@
 
 <h1>Services</h1>
 
+<%= link_to '<button class="btn btn-primary">Novo Serviço</button>'.html_safe, new_service_path %>
+
 <div id="services">
   <% @services.each do |service| %>
     <%= render service %>
     <p>
-      <%= link_to "Mostar", service %>
+      <%= link_to '<button class="btn btn-info">Mostar</button>'.html_safe, service %>
     </p>
   <% end %>
 </div>
-
-<%= link_to "Novo Serviço", new_service_path %>

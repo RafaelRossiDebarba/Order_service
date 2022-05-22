@@ -2,9 +2,9 @@
 
 <%= render @service %>
 
-<div>
-  <%= link_to "Editar", edit_service_path(@service) %> |
-  <%= link_to "Voltar", services_path %>
+<div class="btn-group">
+  <%= link_to '<button class="btn btn-primary">Editar</button>'.html_safe, edit_service_path(@service) %>
+  <%= link_to '<button class="btn btn-dark">Voltar</button>'.html_safe, services_path %>
 
-  <%= button_to "Deletar", @service, method: :delete %>
+  <%= button_to "Deletar", @service, method: :delete, class: "btn btn-danger" %>
 </div>

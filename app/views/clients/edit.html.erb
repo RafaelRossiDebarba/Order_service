@@ -1,10 +1,9 @@
-<h1>Editing client</h1>
+<h1>Editar Cliente</h1>
 
 <%= render "form", client: @client %>
 
 <br>
 
 <div>
-  <%= link_to "Show this client", @client %> |
-  <%= link_to "Back to clients", clients_path %>
+  <%= link_to '<button class="btn btn-dark">Voltar</button>'.html_safe, clients_path %>
 </div>

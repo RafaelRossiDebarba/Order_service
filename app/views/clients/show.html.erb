@@ -2,9 +2,9 @@
 
 <%= render @client %>
 
-<div>
-  <%= link_to "Edit this client", edit_client_path(@client) %> |
-  <%= link_to "Back to clients", clients_path %>
+<div class="btn-group">
+  <%= link_to '<button class="btn btn-primary">Editar</button>'.html_safe, edit_client_path(@client) %>
+  <%= link_to '<button class="btn btn-dark">Voltar</button>'.html_safe, clients_path %>
 
-  <%= button_to "Destroy this client", @client, method: :delete %>
+  <%= button_to "Deletar", @client, method: :delete, class: "btn btn-danger" %>
 </div>

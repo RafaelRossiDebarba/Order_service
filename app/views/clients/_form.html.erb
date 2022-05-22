@@ -12,21 +12,21 @@
   <% end %>
 
   <div>
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
+    <%= form.label :name, style: "display: block", class: "form-label" %>
+    <%= form.text_field :name, class: "form-control" %>
   </div>
 
   <div>
-    <%= form.label :address, style: "display: block" %>
-    <%= form.text_field :address %>
+    <%= form.label :address, style: "display: block", class: "form-label" %>
+    <%= form.text_field :address, class: "form-control" %>
   </div>
 
   <div>
-    <%= form.label :city, style: "display: block" %>
-    <%= form.text_field :city %>
+    <%= form.label :city, style: "display: block", class: "form-label" %>
+    <%= form.text_field :city, class: "form-control" %>
   </div>
 
   <div>
-    <%= form.submit %>
+    <%= form.submit "Salvar", class: "btn btn-success" %>
   </div>
 <% end %>
